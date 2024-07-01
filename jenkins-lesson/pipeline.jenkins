@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './gradlew clean build'
+                sh 'gradle clean build'
             }
 
             post {
@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './gradlew test'
+                sh 'gradle test'
             }
         }
     }
